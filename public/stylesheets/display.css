@@ -1,0 +1,6 @@
+* {margin:0; padding:0;}
+.display {width:1000px; margin:0 auto; font-family: Arial,Verdana,sans-serif; color:#999;}
+h1 {margin:20px 0 0 20px; float:left; font-size:16pt;}
+p.title_phrase { margin:20px 0 0 10px; float:left; font-size:12pt; color:#666;}
+.contain-lists {float:left; margin:20px; width:100%; padding-top:10px; border-top:  1px solid #CCC;}
+

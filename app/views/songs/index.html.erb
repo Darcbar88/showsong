@@ -1,0 +1,44 @@
+<div class="contain-lists">
+<h3>Songs</h3>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Blurb</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @songs.each do |song| %>
+
+  <tr class="<%= cycle('list_line_odd', 'list_line_even' ) %>">
+  <td class="list_song_name">
+    <dl>
+      <dt><%= song.title %></dt>
+      <dd><%= song.artist %></dd>
+    </dl>
+  </td>
+
+  <td class="list_song_details">
+    <dl>
+      <dt><%= song.blurb %></dt>
+      <dt><%= song.image_url %></dt>
+    </dl>
+  </td>
+  <td class="list_actions">
+    <%= link_to 'Show', song %>
+    <%= link_to 'Edit', edit_song_path(song) %></td>
+    <%= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %>
+  </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Song', new_song_path %>
+</div>
+
